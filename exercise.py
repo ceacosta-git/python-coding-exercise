@@ -25,5 +25,8 @@ def find_first_neighbors(numbers, target):
     neighbors = [left_neighbor, right_neighbor]
     return neighbors
 
-find_first_neighbors([1,2,4,54,523,52,5,52,525,0,75,8,9,97,0,70,5,7,346,3,5], 0)
+
+if __name__ == "__main__":
+    test_numbers = [1,2,4,54,523,52,5,52,525,0,75,8,9,97,0,70,5,7,346,3,5]
+    print(find_first_neighbors(test_numbers, 0))
 
