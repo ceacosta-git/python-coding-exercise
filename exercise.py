@@ -3,7 +3,7 @@
 #
 # first neighbors
 
-def find_first_neighbors(numbers, target):
+def find_first_neighbors(numbers:list[int], target:int) -> list[int]:
 
     # target is not on numbers
     # target is first on list
