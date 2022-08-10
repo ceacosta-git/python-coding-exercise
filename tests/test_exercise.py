@@ -1,5 +1,5 @@
 import pytest
-from exercise import find_first_neighbors
+from src.exercise import find_first_neighbors
 
 
 def test_neighbors_target_has_both_neighbors():
