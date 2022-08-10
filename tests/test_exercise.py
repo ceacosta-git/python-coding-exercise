@@ -19,3 +19,10 @@ def test_neigbhbors_target_with_only_left_neighbor():
     test_sample = [11, 58, 99, 14]
     neighbors = find_first_neighbors(test_sample, 14)
     pytest.fail("missing requirement - what to return when target is the last element in the list?")
+
+
+def test_neighbors_target_not_present():
+    test_sample = [5, 13, 88, 109, 9, 77, 11]
+    neighbors = find_first_neighbors(test_sample, 99999)
+    print(neighbors)
+    pytest.fail("missinng requirement - what to return when target is not in the list?")
