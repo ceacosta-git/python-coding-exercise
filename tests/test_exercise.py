@@ -26,25 +26,15 @@ def test_neighbors_target_with_no_neighbors():
     assert neighbors == []
 
 
-def test_neighbors_target_not_present():
-    test_sample = [5, 13, 88, 109, 9, 77, 11]
+target_not_present_samples = \
+    [([5, 13, 88], 9999),  # numbers is non-empty
+     ([], 11),  # numbers is empty
+     (None, 33)]  # numbers is none
+
+
+@pytest.mark.parametrize("test_sample, test_target", target_not_present_samples)
+def test_neighbors_target_not_present(test_sample, test_target):
     with pytest.raises(ValueError) as e:
-        find_first_neighbors(test_sample, 99999)
+        find_first_neighbors(test_sample, test_target)
 
-    assert '99999 is not in the list' in str(e.value)
-
-
-def test_neighbors_numbers_is_empty():
-    test_sample = []
-    with pytest.raises(ValueError) as e:
-        find_first_neighbors(test_sample, 99999)
-
-    assert '99999 is not in the list' in str(e.value)
-
-
-def test_neighbors_numbers_is_none():
-    test_sample = None
-    with pytest.raises(ValueError) as e:
-        find_first_neighbors(test_sample, 99999)
-
-    assert '99999 is not in the list' in str(e.value)
+    assert f'{test_target} is not in the list' in str(e.value)
