@@ -19,10 +19,15 @@ def find_first_neighbors(numbers:list[int], target:int) -> list[int]:
     else:
         raise ValueError(f'{target} is not in the list')
 
-    if first_match_at == 0:
+    target_is_first_element = first_match_at == 0
+    target_is_last_element = first_match_at == (len(numbers) - 1)
+
+    if target_is_first_element and target_is_last_element:
+        neighbors = []
+    elif target_is_first_element:
         right_neighbor = numbers[first_match_at + 1]
         neighbors = [right_neighbor]
-    elif first_match_at == (len(numbers) - 1):
+    elif target_is_last_element:
         left_neighbor = numbers[first_match_at - 1]
         neighbors = [left_neighbor]
     else:

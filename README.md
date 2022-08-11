@@ -40,3 +40,13 @@ Example:
 
 Given list [15, 3, 76, 78, 5, 33, 1] and target is 1
 <br>Return [33]
+
+### Scenario: target is the only element of the list
+*Given* a list of numbers and a target number
+<br>*When* the target number is the only element in the list
+<br>*Then* return no neighbors (i.e., empty list)
+
+Example:
+
+Given list [15] and target is 15
+<br>Return []

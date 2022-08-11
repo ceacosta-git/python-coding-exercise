@@ -20,6 +20,12 @@ def test_neighbors_target_with_only_left_neighbor():
     assert neighbors == [99]
 
 
+def test_neighbors_target_with_no_neighbors():
+    test_sample = [11]
+    neighbors = find_first_neighbors(test_sample, 11)
+    assert neighbors == []
+
+
 def test_neighbors_target_not_present():
     test_sample = [5, 13, 88, 109, 9, 77, 11]
     with pytest.raises(ValueError) as e:
