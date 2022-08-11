@@ -5,13 +5,10 @@
 
 def find_first_neighbors(numbers:list[int], target:int) -> list[int]:
 
-    # target is not on numbers
-    # target is first on list
-    # target is last of list
     # numbers is empty or None
     # check datatypes
     # decimals/floats
-    # correct nuumber of parameters
+    # correct number of parameters
     # return type
     # test sample with multiple matches
 
@@ -19,6 +16,8 @@ def find_first_neighbors(numbers:list[int], target:int) -> list[int]:
         if number == target:
             first_match_at = i
             break
+    else:
+        raise ValueError(f'{target} is not in the list')
 
     left_neighbor = numbers[first_match_at - 1]
     right_neighbor = numbers[first_match_at + 1]

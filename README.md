@@ -13,3 +13,10 @@ Given list [15, 3, 76, 78, 5, 3, 1] and target is 3
 
 Given list [15, 3, 76, 78, 5, 3, 1] and target is 78
 <br>Return [76, 5]
+
+## Additional requirements
+
+*Given* a list of numbers and a target number
+<br>*When* the target number is not in the list
+<br>*Then* raise an error
+
