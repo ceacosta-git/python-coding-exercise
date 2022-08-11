@@ -3,14 +3,14 @@
 #
 # first neighbors
 
-def find_first_neighbors(numbers:list[int], target:int) -> list[int]:
-
-    # numbers is empty or None
+def find_first_neighbors(numbers: list[int], target: int) -> list[int]:
     # check datatypes
     # decimals/floats
     # correct number of parameters
     # return type
     # test sample with multiple matches
+    if numbers is None:
+        raise ValueError(f'{target} is not in the list')
 
     for i, number in enumerate(numbers):
         if number == target:
@@ -35,5 +35,3 @@ def find_first_neighbors(numbers:list[int], target:int) -> list[int]:
         right_neighbor = numbers[first_match_at + 1]
         neighbors = [left_neighbor, right_neighbor]
     return neighbors
-
-

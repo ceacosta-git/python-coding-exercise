@@ -32,3 +32,19 @@ def test_neighbors_target_not_present():
         find_first_neighbors(test_sample, 99999)
 
     assert '99999 is not in the list' in str(e.value)
+
+
+def test_neighbors_numbers_is_empty():
+    test_sample = []
+    with pytest.raises(ValueError) as e:
+        find_first_neighbors(test_sample, 99999)
+
+    assert '99999 is not in the list' in str(e.value)
+
+
+def test_neighbors_numbers_is_none():
+    test_sample = None
+    with pytest.raises(ValueError) as e:
+        find_first_neighbors(test_sample, 99999)
+
+    assert '99999 is not in the list' in str(e.value)
