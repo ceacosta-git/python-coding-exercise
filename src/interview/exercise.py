@@ -19,9 +19,13 @@ def find_first_neighbors(numbers:list[int], target:int) -> list[int]:
     else:
         raise ValueError(f'{target} is not in the list')
 
-    left_neighbor = numbers[first_match_at - 1]
-    right_neighbor = numbers[first_match_at + 1]
-    neighbors = [left_neighbor, right_neighbor]
+    if first_match_at == 0:
+        right_neighbor = numbers[first_match_at + 1]
+        neighbors = [right_neighbor]
+    else:
+        left_neighbor = numbers[first_match_at - 1]
+        right_neighbor = numbers[first_match_at + 1]
+        neighbors = [left_neighbor, right_neighbor]
     return neighbors
 
 

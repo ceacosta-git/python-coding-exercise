@@ -11,8 +11,7 @@ def test_neighbors_target_has_both_neighbors():
 def test_neighbors_target_with_only_right_neighbor():
     test_sample = [11, 58, 99, 14]
     neighbors = find_first_neighbors(test_sample, 11)
-    pytest.fail("missing requirement - what to return when target is the first element in the list?")
-
+    assert neighbors == [58]
 
 @pytest.mark.skip
 def test_neighbors_target_with_only_left_neighbor():
