@@ -30,3 +30,13 @@ Example:
 
 Given list [15, 3, 76, 78, 5, 3, 1] and target is 15
 <br>Return [3]
+
+### Scenario: target is the last element of the list
+*Given* a list of numbers and a target number
+<br>*When* the target number is the last element in the list
+<br>*Then* return its neighbor (i.e., item at the left of target)
+
+Example:
+
+Given list [15, 3, 76, 78, 5, 33, 1] and target is 1
+<br>Return [33]

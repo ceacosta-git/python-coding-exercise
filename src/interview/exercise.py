@@ -22,6 +22,9 @@ def find_first_neighbors(numbers:list[int], target:int) -> list[int]:
     if first_match_at == 0:
         right_neighbor = numbers[first_match_at + 1]
         neighbors = [right_neighbor]
+    elif first_match_at == (len(numbers) - 1):
+        left_neighbor = numbers[first_match_at - 1]
+        neighbors = [left_neighbor]
     else:
         left_neighbor = numbers[first_match_at - 1]
         right_neighbor = numbers[first_match_at + 1]

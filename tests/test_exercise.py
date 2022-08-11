@@ -13,11 +13,11 @@ def test_neighbors_target_with_only_right_neighbor():
     neighbors = find_first_neighbors(test_sample, 11)
     assert neighbors == [58]
 
-@pytest.mark.skip
+
 def test_neighbors_target_with_only_left_neighbor():
     test_sample = [11, 58, 99, 14]
     neighbors = find_first_neighbors(test_sample, 14)
-    pytest.fail("missing requirement - what to return when target is the last element in the list?")
+    assert neighbors == [99]
 
 
 def test_neighbors_target_not_present():
@@ -26,4 +26,3 @@ def test_neighbors_target_not_present():
         find_first_neighbors(test_sample, 99999)
 
     assert '99999 is not in the list' in str(e.value)
-
