@@ -1,6 +1,16 @@
 # python-coding-exercise
 
-## Problem description
+## Problem description for count_duplicates.py
+*Given* a list of items
+*When* processing the list provided above
+*Then* return each item and the number of times it appears in the list
+
+Examples:
+
+Given list ["apple", "orange", "watermelon", "apple"]
+<br>Return apple 2, orange 1, watermelon 1
+
+## Problem description for exercise.py
 
 *Given* a list of numbers and a target number
 <br>*When* the target number is in the list
