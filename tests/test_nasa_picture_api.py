@@ -4,10 +4,12 @@ import logging.config
 from datetime import datetime
 from pathlib import Path
 
+print(str(Path('../logging.conf').resolve()))
 logging.config.fileConfig(str(Path('../logging.conf').resolve()))
 
 # create logger
 logger = logging.getLogger('test_nasa_picture_api')
+
 
 def test_get_picture_of_the_day():
     today = datetime.today().strftime('%Y-%m-%d')
