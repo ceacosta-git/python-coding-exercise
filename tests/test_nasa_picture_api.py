@@ -2,8 +2,9 @@ import requests
 import logging
 import logging.config
 from datetime import datetime
+from pathlib import Path
 
-logging.config.fileConfig('../logging.conf')
+logging.config.fileConfig(str(Path('../logging.conf').resolve()))
 
 # create logger
 logger = logging.getLogger('test_nasa_picture_api')
